@@ -1,3 +1,6 @@
+/* main */
+/* home */
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,600;1,600&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -19,8 +22,8 @@ figure, blockquote, dl, dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -70,4 +73,63 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+body {
+  max-width: 90vw;
+  padding: 0 1em;
+  line-height: 1.5;
+  color: #fffbf1;
+  background-color: #2f2f2f;
+  margin-inline: auto;
+}
+
+a {
+  color: #fffbf1;
+}
+
+h1, h2, h3, p {
+  max-width: 60ch;
+}
+
+h1 {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2, h3 {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+  margin-block-start: 1em;
+}
+
+:where(ul, ol) {
+  list-style-position: inside;
+}
+
+svg {
+  width: 15px;
+  height: 15px;
+  fill: #e9b324;
+}
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }

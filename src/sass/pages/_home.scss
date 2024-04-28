@@ -1,1 +1,70 @@
 /* home */
+$background-color: #2f2f2f;
+$text-color: #fffbf1;
+$star-color: #e9b324;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,600;1,600&display=swap');
+
+$heading-font: "Rubik Mono One", monospace;
+$subheading-font: "Rubik", sans-serif;
+
+body {
+    max-width: 90vw;
+    padding: 0 1em;
+    line-height: 1.5;
+    color: $text-color;
+    background-color: $background-color;
+    margin-inline: auto;
+}
+
+a {
+    color: $text-color;
+}
+
+h1, h2, h3, p {
+    max-width: 60ch;
+}
+
+h1 {
+    font-family: $heading-font;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2, h3 {
+    font-family: $subheading-font;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    line-height: 1.1;
+    margin-block-start: 1em;
+}
+
+:where(ul, ol) {
+    list-style-position: inside;
+}
+
+svg {
+    width: 15px;
+    height: 15px;
+    fill: $star-color;
+}
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+}
+  
